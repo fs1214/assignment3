@@ -1,0 +1,46 @@
+1. What file is the os.path.abspath function defined in?
+os.path.abspath?
+Type:       function
+String Form:<function abspath at 0x7f600431a9b0>
+File:       /usr/lib/python2.7/posixpath.py
+Definition: os.path.abspath(path)
+Docstring:  Return an absolute path.
+
+This function is defined in file /usr/lib/python2.7/posixpath.py.
+
+2. Using a single command, assign the number of files in the /etc directory to a variable named “num”. What command did you use?
+A single command:
+num = int(os.popen('ls /etc | wc -l').read())
+
+In [4]:  num
+Out[4]: 232
+
+3. Print the square root of num. What is the value?
+In [9]:  import math
+In [10]:  math.sqrt(num)
+Out[10]: 15.231546211727817
+The value of the square root of num (232) is 15.231546211727817.
+
+4. Set a variable x = 12345. What is the fastest operation: x**2, x*x, or numpy.square(x)?
+x=12345
+%timeit x**2
+10000000 loops, best of 3: 62.3 ns per loop
+%timeit x*x
+10000000 loops, best of 3: 45.9 ns per loop
+import numpy
+%timeit numpy.square(x)
+1000000 loops, best of 3: 1.36 µs per loop
+The fastest operation is x*x.
+
+5. How many cell magic commands are there?
+%lsmagic
+Out[4]: 
+Available line magics:
+%alias  %alias_magic  %autocall  %automagic  %autosave  %bookmark  %cd  %clear  %colors  %config  %connect_info  %debug  %dhist  %dirs  %doctest_mode  %ed  %edit  %env  %gui  %guiref  %hist  %history  %install_default_config  %install_ext  %install_profiles  %killbgscripts  %less  %load  %load_ext  %loadpy  %logoff  %logon  %logstart  %logstate  %logstop  %lsmagic  %macro  %magic  %man  %matplotlib  %more  %notebook  %page  %pastebin  %pdb  %pdef  %pdoc  %pfile  %pinfo  %pinfo2  %popd  %pprint  %precision  %profile  %prun  %psearch  %psource  %pushd  %pwd  %pycat  %pylab  %qtconsole  %quickref  %recall  %rehashx  %reload_ext  %rep  %rerun  %reset  %reset_selective  %run  %save  %sc  %store  %sx  %system  %tb  %time  %timeit  %unalias  %unload_ext  %who  %who_ls  %whos  %xdel  %xmode
+
+Available cell magics:
+%%!  %%HTML  %%SVG  %%bash  %%capture  %%debug  %%file  %%html  %%javascript  %%latex  %%perl  %%prun  %%pypy  %%python  %%python3  %%ruby  %%script  %%sh  %%svg  %%sx  %%system  %%time  %%timeit  %%writefile
+
+Automagic is ON, % prefix IS NOT needed for line magics.
+
+There are 24 cell magic commands.
